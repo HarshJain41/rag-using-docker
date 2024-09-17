@@ -4,15 +4,7 @@ This is a **RAG-based (Retrieval Augmented Generation)** document search applica
 
 ## Project Structure
 
-├── test_data/               # Folder containing test files (e.g., PDF, DOCX) to test the app working
-├── Dockerfile               # Dockerfile for containerization
-├── app.py                   # Main application script
-├── doc_preprocessing.py      # Functions for loading and processing documents
-├── indexing.py              # Functions for indexing documents in Pinecone
-├── requirements.txt         # Python dependencies
-├── retrieval.py             # Functions for document retrieval
-└── .env                     # Environment variables (add this file manually)
-
+. ├── test_data/ # Folder containing test files (e.g., PDF, DOCX) ├── Dockerfile # Dockerfile for containerization ├── app.py # Main application script ├── doc_preprocessing.py # Functions for loading and processing documents ├── indexing.py # Functions for indexing documents in Pinecone ├── requirements.txt # Python dependencies ├── retrieval.py # Functions for document retrieval └── .env # Environment variables (add this manually)
 
 ## Features
 
@@ -49,16 +41,15 @@ COHERE_API_KEY=your_cohere_api_key
 
 The easiest way to run the app is by using Docker. Follow these instructions to build and run the Docker container.
 
-1. In the root directory of the project (where the Dockerfile is located), run the following command to build the Docker image:
+1. **Build the Docker Image**: In the root directory of the project (where the Dockerfile is located), run the following command to build the Docker image:
    ```bash
    docker build -t rag-document-search .
 ```
 
-2. Run the Docker Container
+2. **Run the Docker Container**: Once the image is built, run the container:
 ```bash
 docker run -p 8501:8501 -e PINECONE_API_KEY=your_valid_pinecone_api_key_here -e COHERE_API_KEY=your_cohere_api_key_here rag-document-search
 ```
-
 This will start the Streamlit app inside a Docker container, and the app will be available at ```http://localhost:8501```.
 
 
