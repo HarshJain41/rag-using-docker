@@ -67,5 +67,9 @@ docker run -p 8501:8501 -e PINECONE_API_KEY=your_valid_pinecone_api_key_here -e 
 ```
 This will start the Streamlit app inside a Docker container, and the app will be available at ```http://localhost:8501```.
 
+### 4. Hugging Face Deployed App Link:
 
+To deploy the app on hugging face, sign up for an account and create a free space. In the space, go to settings and set your secrets as cohere api key and pinecone api key. Then go to files and upload main files of the project there. The app will be automatically start building and you can interact with it. 
+
+Here's the working link of my hugging face app - https://huggingface.co/spaces/Harsh12/rag-assignment
 
